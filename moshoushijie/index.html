@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="魔兽世界官方正版代理服务指南，包含国服回归信息、游戏下载、账号安全、充值指南及最新资讯。提供专业的游戏环境与客服支持。">
+    <meta name="keywords" content="魔兽世界, 魔兽世界代理, 魔兽世界国服, 魔兽世界下载, 魔兽世界充值, 魔兽世界客服">
+    <title>魔兽世界代理-官方正版游戏下载与运营服务指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #c79c6e; /* 经典的魔兽战利品金色 */
+            --primary-hover: #d4af7a;
+            --bg-dark: #121212;
+            --bg-card: #1e1e1e;
+            --bg-header: rgba(18, 18, 18, 0.95);
+            --text-main: #ffffff;
+            --text-secondary: #b0b0b0;
+            --border-color: #333;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #000;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(199, 156, 110, 0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(199, 156, 110, 0.1);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background-color: var(--bg-header);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        header .container {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://picsum.photos/seed/wowhero/1920/1080.jpg') center/cover no-repeat;
+            margin-top: 70px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+            font-weight: 800;
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            color: #ddd;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        /* Features Grid */
+        .features {
+            padding: 4rem 0;
+            background-color: var(--bg-dark);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background-color: var(--bg-card);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Game Info Section */
+        .game-info {
+            padding: 4rem 0;
+            background-color: #181818;
+        }
+
+        .info-layout {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .info-text {
+            flex: 1;
+        }
+
+        .info-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .info-text p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        .info-image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .info-image img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .info-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Downloads / Versions */
+        .downloads {
+            padding: 4rem 0;
+        }
+
+        .download-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .download-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .download-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .download-info span {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 4rem 0;
+            background-color: #181818;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--bg-card);
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            color: var(--text-main);
+        }
+
+        .faq-question:hover {
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: var(--text-secondary);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '−';
+            font-size: 1.5rem;
+        }
+
+        .faq-item .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a0a0a;
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--text-main);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #222;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            nav {
+                display: none; /* Simplified for mobile */
+            }
+
+            .header-actions {
+                display: none;
+            }
+
+            .info-layout {
+                flex-direction: column;
+            }
+
+            .download-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5L12 22l10-8.5-5-2.5-5 2.5z"/>
+                </svg>
+                <span>艾泽拉斯代理</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#game-info">游戏介绍</a></li>
+                    <li><a href="#downloads">下载专区</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                    <li><a href="#support">客服支持</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#login" class="btn btn-outline">登录账号</a>
+                <a href="#register" class="btn btn-primary">注册账号</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>重返艾泽拉斯 <br><span>体验正版魔兽世界</span></h1>
+                <p>连接全球玩家，提供稳定、安全、高速的魔兽世界正版代理服务。无论是经典怀旧服还是最新资料片，我们为您提供最佳游戏环境。</p>
+                <div class="hero-buttons">
+                    <a href="#downloads" class="btn btn-primary">立即下载客户端</a>
+                    <a href="#game-info" class="btn btn-outline">了解更多</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">为什么选择我们</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>官方正版授权</h3>
+                        <p>严格遵循游戏厂商授权协议，保障玩家账号安全与游戏体验，杜绝盗版风险。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>极速节点加速</h3>
+                        <p>全球分布式服务器节点，智能路由优化，降低延迟，告别卡顿与掉线。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛠️</div>
+                        <h3>全天候技术支持</h3>
+                        <p>专业客服团队7x24小时在线，快速响应玩家遇到的安装、登录及账号问题。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h3>安全便捷充值</h3>
+                        <p>支持多种支付方式，交易透明，保障虚拟货币安全，支持多平台充值。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Info Section -->
+        <section id="game-info" class="game-info">
+            <div class="container">
+                <div class="info-layout">
+                    <div class="info-text">
+                        <h2>关于魔兽世界</h2>
+                        <p>《魔兽世界》是由著名游戏公司暴雪娱乐开发的一款大型多人在线角色扮演游戏（MMORPG）。作为代理运营平台，我们的核心使命是让更多中国玩家能够便捷、流畅地体验这款史诗级游戏。</p>
+                        <p>我们提供从新手引导到高级副本攻略的全方位服务。无论您是初次踏入艾泽拉斯的新手，还是寻找团队副本挑战的老玩家，都能在这里找到归属。我们的代理服务涵盖国服经典怀旧服、正式服及最新资料片，确保您不错过任何一次冒险。</p>
+                        <p>选择我们，不仅是为了玩游戏，更是为了选择一个稳定、公平、充满热情的社区环境。</p>
+                        <a href="#" class="btn btn-primary" style="margin-top: 1rem;">查看游戏指南</a>
+                    </div>
+                    <div class="info-image">
+                        <img src="https://picsum.photos/seed/wowdragon/600/400.jpg" alt="魔兽世界游戏截图">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Downloads Section -->
+        <section id="downloads" class="downloads">
+            <div class="container">
+                <h2 class="section-title">客户端下载</h2>
+                <div class="download-list">
+                    <div class="download-item">
+                        <div class="download-info">
+                            <h3>魔兽世界 正式服客户端</h3>
+                            <span>包含最新版本 11.0 "地心之战" 内容 | 大小: 85GB | 自动更新</span>
+                        </div>
+                        <div class="download-actions">
+                            <a href="#" class="btn btn-primary">立即下载</a>
+                        </div>
+                    </div>
+                    <div class="download-item">
+                        <div class="download-info">
+                            <h3>魔兽世界 经典怀旧服</h3>
+                            <span>保留原汁原味体验 | 大小: 45GB | 支持多职业重置</span>
+                        </div>
+                        <div class="download-actions">
+                            <a href="#" class="btn btn-outline">下载怀旧服</a>
+                        </div>
+                    </div>
+                    <div class="download-item">
+                        <div class="download-info">
+                            <h3>魔兽世界 安卓/苹果移动端</h3>
+                            <span>随时随地登录游戏 | 支持跨平台数据互通</span>
+                        </div>
+                        <div class="download-actions">
+                            <a href="#" class="btn btn-outline">前往应用商店</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2 class="section-title">常见问题 (FAQ)</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">如何注册并开始游戏？</div>
+                        <div class="faq-answer">
+                            <p>请访问首页“注册账号”页面，填写您的邮箱和密码。注册成功后，下载对应版本的客户端，使用注册账号登录即可开始冒险。首次登录需进行实名认证。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">游戏需要什么配置？</div>
+                        <div class="faq-answer">
+                            <p>官方推荐配置：Windows 10/11 64位系统，Intel i5-8400 或 AMD Ryzen 5 1600 CPU，16GB 内存，NVIDIA GTX 1060 6GB 显卡。低配设备可开启“性能模式”进行游玩。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">充值失败怎么办？</div>
+                        <div class="faq-answer">
+                            <p>如果遇到充值失败，请检查您的支付账户余额或网络连接。如果问题依旧，请联系在线客服并提供订单号，我们的客服将在5分钟内为您处理。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">代理服务是否安全？</div>
+                        <div class="faq-answer">
+                            <p>是的，我们承诺所有交易均经过加密处理，严格保护玩家隐私。作为正规代理平台，我们承诺不售卖外挂、脚本等破坏游戏平衡的非法工具。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section" style="flex: 2; min-width: 250px;">
+                    <h4>艾泽拉斯代理</h4>
+                    <p>致力于为全球魔兽世界玩家提供最优质的网络连接与客户服务。我们连接玩家，连接世界。</p>
+                </div>
+                <div class="footer-section" style="flex: 1; min-width: 150px;">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">游戏公告</a></li>
+                        <li><a href="#">社区论坛</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section" style="flex: 1; min-width: 150px;">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">账号注册</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">联系客服</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023-2024 艾泽拉斯代理平台. All Rights Reserved. 本站为游戏攻略与资讯展示页面。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
