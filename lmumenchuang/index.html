@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="专业铝木门窗选购指南，提供高品质铝木复合门窗产品介绍、性能优势分析、安装流程及常见问题解答，助您打造节能环保的家居生活空间。">
+    <meta name="keywords" content="铝木门窗, 铝木复合窗, 隐形纱窗, 断桥铝门窗, 节能门窗, 实木门窗">
+    <title>铝木门窗-节能环保的高品质家居窗体解决方案</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --secondary-color: #7f8c8d;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+            --shadow-md: 0 5px 15px rgba(0,0,0,0.1);
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: var(--bg-white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .header-cta {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .header-cta {
+                display: inline-block;
+                padding: 8px 20px;
+                background-color: var(--accent-color);
+                color: white !important;
+                border-radius: 50px;
+                font-weight: 500;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/windowview/1920/1080.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeIn Up 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 35px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #a93226;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            margin-left: 15px;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--text-main);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Section Titles */
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .feature-card {
+            background: var(--bg-white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Product Showcase */
+        .product-showcase {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .product-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .product-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .product-info ul {
+            margin-bottom: 30px;
+        }
+
+        .product-info li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .product-info li::before {
+            content: '✓';
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Comparison Table */
+        .comparison-section {
+            background-color: var(--bg-light);
+            padding: 60px 20px;
+            border-radius: var(--border-radius);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            background: white;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .comparison-table th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 500;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* FAQ */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 20px;
+        }
+
+        .faq-item {
+            background: var(--bg-white);
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            padding: 20px;
+        }
+
+        .faq-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .faq-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 20px 20px;
+            margin-top: 80px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .product-showcase {
+                grid-template-columns: 1fr;
+            }
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+            }
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+            nav {
+                display: none;
+            }
+            .logo {
+                flex-grow: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">金<span>铝木</span>门窗</a>
+            <nav>
+                <ul>
+                    <li><a href="#features" class="active">产品优势</a></li>
+                    <li><a href="#products">系列展示</a></li>
+                    <li><a href="#comparison">参数对比</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="header-cta">获取报价</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>拥抱自然，极致节能</h1>
+                <p>高端铝木复合门窗，融合实木的温润质感与铝合金的坚固耐用，为您打造恒温、静音、环保的居家环境。</p>
+                <div>
+                    <a href="#products" class="btn">浏览系列</a>
+                    <a href="#contact" class="btn btn-outline">预约测量</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" id="features">
+            <div class="section-header">
+                <h2>为什么选择铝木门窗</h2>
+                <p>打破传统单一材质的局限，铝木结合技术为您带来超越期待的使用体验。</p>
+            </div>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>双重防护结构</h3>
+                    <p>外部铝合金型材提供卓越的防水、防潮和抗风压性能；内部实木内衬确保结构稳定，杜绝变形开裂。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">❄️</div>
+                    <h3>卓越节能性能</h3>
+                    <p>采用三道密封设计，配合断桥铝型材，显著降低室内外热量传递，夏季隔热，冬季保暖，降低空调能耗。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>经典美学设计</h3>
+                    <p>实木纹理自然细腻，色彩丰富多样。无论是欧式、美式还是现代简约风格，都能完美融入家居装修。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🔇</div>
+                    <h3>静音降噪体验</h3>
+                    <p>多层密封结构有效阻隔外界噪音，为您在喧嚣的城市中创造一个宁静舒适的休憩空间。</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="container" id="products">
+            <div class="product-showcase">
+                <div class="product-image">
+                    <img src="https://picsum.photos/seed/windowart/600/400.jpg" alt="高端铝木推拉窗展示">
+                </div>
+                <div class="product-info">
+                    <h3>高端系列：隐形纱窗推拉窗</h3>
+                    <p>专为追求生活品质的家庭设计。采用高精度五金配件，滑动顺畅无卡顿。隐形纱窗设计，不使用时完全收纳，不占用空间，保持窗框整体美观。</p>
+                    <ul>
+                        <li>型材厚度：5mm/1.8mm</li>
+                        <li>玻璃配置：双层中空钢化玻璃</li>
+                        <li>密封材料：三元乙丙橡胶条</li>
+                        <li>表面处理：静电粉末喷涂 + 环保木纹漆</li>
+                    </ul>
+                    <a href="#contact" class="btn">咨询详情</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="comparison-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>材质性能对比</h2>
+                    <p>了解不同材质门窗在隔音、保温、耐久性方面的差异。</p>
+                </div>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>性能指标</th>
+                            <th>纯铝合金门窗</th>
+                            <th>纯实木门窗</th>
+                            <th>铝木复合门窗</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>隔热保温</strong></td>
+                            <td>一般</td>
+                            <td>优异</td>
+                            <td>极佳（断桥结构）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>防水抗风压</strong></td>
+                            <td>极强</td>
+                            <td>一般（易变形）</td>
+                            <td>极强（外铝内木）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>耐候性</strong></td>
+                            <td>极佳</td>
+                            <td>较差（需定期保养）</td>
+                            <td>极佳（铝材保护）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>美观度</strong></td>
+                            <td>工业感较强</td>
+                            <td>自然温润</td>
+                            <td>奢华典雅</td>
+                        </tr>
+                        <tr>
+                            <td><strong>维护成本</strong></td>
+                            <td>低</td>
+                            <td>高（需刷漆）</td>
+                            <td>低（外铝免维护）</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="container" id="faq">
+            <div class="section-header">
+                <h2>选购与安装指南</h2>
+                <p>关于铝木门窗的常见疑问解答。</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>铝木门窗的寿命有多长？</h4>
+                    <p>正常使用情况下，优质铝木门窗的使用寿命可达30年以上。外部的铝合金层保护了内部的木材免受阳光直射和雨水侵蚀，大大延长了整体寿命。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>铝木门窗适合哪些地区？</h4>
+                    <p>铝木门窗非常适合寒冷地区和沿海高湿度地区。其优异的隔热保温性能有助于降低采暖和制冷费用，而外铝内木结构则完美解决了南方潮湿和北方温差大的问题。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>安装时需要注意什么？</h4>
+                    <p>安装前需精确测量洞口尺寸，确保窗框与墙体之间有足够的发泡胶填充层。安装后应检查窗扇开关是否顺畅，密封条是否贴合紧密。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>如何清洁和保养？</h4>
+                    <p>铝合金表面可用清水或中性清洁剂擦拭。实木部分（通常在内侧）虽然不易接触雨水，但应避免使用强酸强碱清洁剂，定期检查五金件润滑即可。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" id="contact" style="text-align: center; padding-bottom: 80px;">
+            <div class="section-header">
+                <h2>开启您的舒适家居生活</h2>
+                <p>专业团队为您提供从测量、设计到安装的一站式服务。</p>
+            </div>
+            <div style="max-width: 500px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: var(--shadow-sm);">
+                <p style="margin-bottom: 20px; color: var(--text-light);">填写下方信息，我们将尽快与您联系。</p>
+                <form onsubmit="event.preventDefault(); alert('感谢您的咨询！我们会尽快联系您。');" style="display: flex; flex-direction: column; gap: 15px;">
+                    <input type="text" placeholder="您的姓名" required style="padding: 12px; border: 1px solid #ddd; border-radius: 4px;">
+                    <input type="tel" placeholder="联系电话" required style="padding: 12px; border: 1px solid #ddd; border-radius: 4px;">
+                    <select style="padding: 12px; border: 1px solid #ddd; border-radius: 4px;">
+                        <option value="">请选择需求类型</option>
+                        <option value="quote">获取报价</option>
+                        <option value="design">设计咨询</option>
+                        <option value="install">预约安装</option>
+                    </select>
+                    <button type="submit" class="btn" style="border: none; cursor: pointer; margin-top: 10px;">提交咨询</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>关于金铝木门窗</h4>
+                <p style="color: #bdc3c7; font-size: 0.9rem;">我们专注于高品质铝木复合门窗的研发与制造，致力于为现代家庭提供健康、环保、舒适的居住环境。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#features">产品优势</a></li>
+                    <li><a href="#products">系列展示</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>服务支持</h4>
+                <ul>
+                    <li><a href="#">安装指南</a></li>
+                    <li><a href="#">保养手册</a></li>
+                    <li><a href="#">售后服务</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系方式</h4>
+                <ul>
+                    <li>电话：400-123-4567</li>
+                    <li>邮箱：service@jialumou.com</li>
+                    <li>地址：中国建材城A区101</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 金铝木门窗有限公司 版权所有.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
