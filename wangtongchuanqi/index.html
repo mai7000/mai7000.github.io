@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="网通传奇 - 经典复古传奇游戏资料站，提供热血传奇、传奇世界、传奇私服版本推荐、职业攻略、装备掉落查询及玩家交流社区。">
+    <meta name="keywords" content="网通传奇, 传奇, 热血传奇, 传奇私服, 传奇攻略, 传奇装备, 网通1区">
+    <title>网通传奇-经典复古版本攻略与玩家社区</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #b92b27;
+            --secondary-color: #f39c12;
+            --dark-bg: #1a1a1a;
+            --card-bg: #252525;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --border-radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "Heiti SC", sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: #000;
+            border-bottom: 2px solid var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-shadow: 0 0 10px rgba(185, 43, 39, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-menu a {
+            font-size: 16px;
+            font-weight: 500;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--secondary-color);
+            border-bottom-color: var(--secondary-color);
+        }
+
+        .server-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            background: rgba(0,0,0,0.3);
+            padding: 5px 15px;
+            border-radius: 20px;
+            border: 1px solid #333;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #2ecc71;
+            border-radius: 50%;
+            box-shadow: 0 0 5px #2ecc71;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://picsum.photos/seed/legend/1920/600') no-repeat center center/cover;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #ddd;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #a91b16;
+            box-shadow: 0 0 15px rgba(185, 43, 39, 0.6);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--text-main);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: var(--container-width);
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+        }
+
+        /* Content Sections */
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .section-title h2 {
+            color: var(--secondary-color);
+        }
+
+        .section-title a {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .section-title a:hover {
+            color: var(--text-main);
+        }
+
+        /* Server List */
+        .server-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .server-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #333;
+        }
+
+        .server-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            border-color: var(--secondary-color);
+        }
+
+        .server-header {
+            background: linear-gradient(90deg, #333, #222);
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .server-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .server-tag {
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .server-body {
+            padding: 20px;
+        }
+
+        .server-info-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .server-info-row strong {
+            color: var(--text-main);
+        }
+
+        .server-footer {
+            padding: 15px;
+            background-color: #1f1f1f;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-small {
+            padding: 8px 20px;
+            font-size: 14px;
+            background-color: #333;
+            color: white;
+            border-radius: 4px;
+        }
+
+        .btn-small:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* News Grid */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .news-item {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-color);
+            transition: background-color 0.3s;
+        }
+
+        .news-item:hover {
+            background-color: #2a2a2a;
+        }
+
+        .news-date {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .news-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .news-excerpt {
+            font-size: 13px;
+            color: var(--text-muted);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            border: 1px solid #333;
+        }
+
+        .widget-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #444;
+            color: var(--text-main);
+        }
+
+        .rank-list li {
+            padding: 12px 0;
+            border-bottom: 1px dashed #333;
+            display: flex;
+            align-items: center;
+        }
+
+        .rank-num {
+            width: 24px;
+            height: 24px;
+            background-color: #333;
+            color: var(--text-main);
+            text-align: center;
+            line-height: 24px;
+            border-radius: 50%;
+            margin-right: 12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .rank-list li:nth-child(1) .rank-num { background-color: #ffd700; color: #000; }
+        .rank-list li:nth-child(2) .rank-num { background-color: #c0c0c0; color: #000; }
+        .rank-list li:nth-child(3) .rank-num { background-color: #cd7f32; color: #000; }
+
+        .rank-name {
+            flex: 1;
+            font-size: 14px;
+        }
+
+        .rank-value {
+            font-size: 12px;
+            color: var(--secondary-color);
+        }
+
+        .ad-placeholder {
+            width: 100%;
+            height: 250px;
+            background-color: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #444;
+            border-radius: var(--border-radius);
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0f0f0f;
+            border-top: 1px solid #333;
+            padding: 40px 20px 20px;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+            color: #555;
+            font-size: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+            }
+            .nav-menu {
+                margin: 15px 0;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .server-status {
+                width: 100%;
+                justify-content: center;
+            }
+            .hero {
+                height: 350px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <span>⚔️</span> 网通传奇
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="active">首页</a>
+                <a href="#">版本列表</a>
+                <a href="#">装备掉落</a>
+                <a href="#">职业攻略</a>
+                <a href="#">玩家社区</a>
+            </nav>
+            <div class="server-status">
+                <div class="status-dot"></div>
+                <span>全区服在线人数: 12,403</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>重温经典，再战沙城</h1>
+            <p>提供最新、最稳定、最复古的网通传奇版本。拒绝外挂，公平竞技，带你回到那个热血沸腾的年代。</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">立即进入游戏</a>
+                <a href="#" class="btn btn-secondary">查看新区公告</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-container">
+        <!-- Left Content -->
+        <div class="content-area">
+            
+            <!-- Featured Servers -->
+            <section>
+                <div class="section-title">
+                    <h2>热门推荐服务器</h2>
+                    <a href="#">查看全部 ></a>
+                </div>
+                <div class="server-list">
+                    <article class="server-card">
+                        <div class="server-header">
+                            <span class="server-name">网通-苍月岛</span>
+                            <span class="server-tag">开服中</span>
+                        </div>
+                        <div class="server-body">
+                            <div class="server-info-row">
+                                <span>开服时间</span>
+                                <strong>2023-10-01</strong>
+                            </div>
+                            <div class="server-info-row">
+                                <span>当前人数</span>
+                                <strong>3,245 人</strong>
+                            </div>
+                            <div class="server-info-row">
+                                <span>特色</span>
+                                <strong>1.76复古</strong>
+                            </div>
+                        </div>
+                        <div class="server-footer">
+                            <span style="font-size:12px; color:#666;">更新: 2小时前</span>
+                            <a href="#" class="btn-small">进入游戏</a>
+                        </div>
+                    </article>
+
+                    <article class="server-card">
+                        <div class="server-header">
+                            <span class="server-name">网通-英雄合击</span>
+                            <span class="server-tag" style="background-color: #2ecc71;">爆率提升</span>
+                        </div>
+                        <div class="server-body">
+                            <div class="server-info-row">
+                                <span>开服时间</span>
+                                <strong>2023-09-28</strong>
+                            </div>
+                            <div class="server-info-row">
+                                <span>当前人数</span>
+                                <strong>5,102 人</strong>
+                            </div>
+                            <div class="server-info-row">
+                                <span>特色</span>
+                                <strong>自动回收</strong>
+                            </div>
+                        </div>
+                        <div class="server-footer">
+                            <span style="font-size:12px; color:#666;">更新: 30分钟前</span>
+                            <a href="#" class="btn-small">进入游戏</a>
+                        </div>
+                    </article>
+
+                    <article class="server-card">
+                        <div class="server-header">
+                            <span class="server-name">网通-战神归来</span>
+                            <span class="server-tag" style="background-color: #f39c12;">首充双倍</span>
+                        </div>
+                        <div class="server-body">
+                            <div class="server-info-row">
+                                <span>开服时间</span>
+                                <strong>2023-09-25</strong>
+                            </div>
+                            <div class="server-info-row">
+                                <span>当前人数</span>
+                                <strong>8,920 人</strong>
+                            </div>
+                            <div class="server-info-row">
+                                <span>特色</span>
+                                <strong>高爆率</strong>
+                            </div>
+                        </div>
+                        <div class="server-footer">
+                            <span style="font-size:12px; color:#666;">更新: 1天前</span>
+                            <a href="#" class="btn-small">进入游戏</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- News Section -->
+            <section style="margin-top: 40px;">
+                <div class="section-title">
+                    <h2>最新动态</h2>
+                    <a href="#">更多新闻 ></a>
+                </div>
+                <div class="news-grid">
+                    <article class="news-item">
+                        <div class="news-date">2023-10-24</div>
+                        <div class="news-title"><a href="#">网通-苍月岛服务器维护公告：双倍经验活动开启</a></div>
+                        <div class="news-excerpt">各位传奇勇士请注意，为了回馈玩家支持，苍月岛服务器将于本周五晚进行维护，开启双倍经验及装备爆率活动...</div>
+                    </article>
+                    <article class="news-item">
+                        <div class="news-date">2023-10-22</div>
+                        <div class="news-title"><a href="#">【攻略】战士职业在PK中的走位技巧与装备搭配</a></div>
+                        <div class="news-excerpt">战士作为传奇中最经典的职业，在PK中如何利用走位躲避法师的火墙并快速切入？本文为你详细解析...</div>
+                    </article>
+                    <article class="news-item">
+                        <div class="news-date">2023-10-20</div>
+                        <div class="news-title"><a href="#">网通英雄合击区新增“屠龙宝刀”合成功能</a></div>
+                        <div class="news-excerpt">英雄合击区即将迎来重大更新，新增神级装备合成系统，玩家可以通过收集材料合成传说中的屠龙宝刀...</div>
+                    </article>
+                    <article class="news-item">
+                        <div class="news-date">2023-10-18</div>
+                        <div class="news-title"><a href="#">关于打击盗号行为的严厉声明</a></div>
+                        <div class="news-excerpt">我们坚决打击任何形式的盗号行为，请各位玩家注意账号安全，切勿点击不明链接，谨防被骗...</div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Game Guide Section -->
+            <section style="margin-top: 40px;">
+                <div class="section-title">
+                    <h2>新手入门指南</h2>
+                    <a href="#">查看更多 ></a>
+                </div>
+                <div class="server-list">
+                    <article class="server-card">
+                        <div class="server-body">
+                            <h3 style="margin-bottom:10px; color:var(--secondary-color);">1. 注册与登录</h3>
+                            <p style="font-size:14px; color:var(--text-muted);">选择你心仪的网通服务器，填写账号信息。建议使用手机号绑定，方便找回账号。</p>
+                        </div>
+                    </article>
+                    <article class="server-card">
+                        <div class="server-body">
+                            <h3 style="margin-bottom:10px; color:var(--secondary-color);">2. 职业选择</h3>
+                            <p style="font-size:14px; color:var(--text-muted);">了解战士、法师、道士三大职业的特点。战士高爆发，法师群攻，道士辅助，根据喜好选择。</p>
+                        </div>
+                    </article>
+                    <article class="server-card">
+                        <div class="server-body">
+                            <h3 style="margin-bottom:10px; color:var(--secondary-color);">3. 首充福利</h3>
+                            <p style="font-size:14px; color:var(--text-muted);">登录即可领取首充礼包，包含元宝和基础装备，助力你快速升级打怪。</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <!-- Right Sidebar -->
+        <aside class="sidebar">
+            <!-- Login Widget -->
+            <div class="sidebar-widget">
+                <div class="widget-title">玩家登录</div>
+                <div style="display:flex; flex-direction:column; gap:10px;">
+                    <input type="text" placeholder="账号" style="padding:8px; border-radius:4px; border:1px solid #444; background:#111; color:white;">
+                    <input type="password" placeholder="密码" style="padding:8px; border-radius:4px; border:1px solid #444; background:#111; color:white;">
+                    <button class="btn btn-primary" style="width:100%; border:none; cursor:pointer;">立即登录</button>
+                    <a href="#" style="font-size:12px; text-align:center; color:var(--text-muted);">忘记密码？</a>
+                </div>
+            </div>
+
+            <!-- Ad Placeholder -->
+            <div class="sidebar-widget">
+                <div class="ad-placeholder">广告位</div>
+            </div>
+
+            <!-- Top Players -->
+            <div class="sidebar-widget">
+                <div class="widget-title">全服排行榜</div>
+                <ul class="rank-list">
+                    <li>
+                        <span class="rank-num">1</span>
+                        <span class="rank-name">战神001</span>
+                        <span class="rank-value">Lv.999</span>
+                    </li>
+                    <li>
+                        <span class="rank-num">2</span>
+                        <span class="rank-name">龙傲天</span>
+                        <span class="rank-value">Lv.998</span>
+                    </li>
+                    <li>
+                        <span class="rank-num">3</span>
+                        <span class="rank-name">传奇小妹</span>
+                        <span class="rank-value">Lv.997</span>
+                    </li>
+                    <li>
+                        <span class="rank-num">4</span>
+                        <span class="rank-name">狂刀斩月</span>
+                        <span class="rank-value">Lv.996</span>
+                    </li>
+                    <li>
+                        <span class="rank-num">5</span>
+                        <span class="rank-name">魔法师之泪</span>
+                        <span class="rank-value">Lv.995</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="sidebar-widget">
+                <div class="widget-title">常用链接</div>
+                <ul class="rank-list">
+                    <li><a href="#">官方论坛</a></li>
+                    <li><a href="#">下载客户端</a></li>
+                    <li><a href="#">客服中心</a></li>
+                    <li><a href="#">充值中心</a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>关于网通传奇</h3>
+                <p style="font-size:13px; color:#666; line-height:1.8;">
+                    我们致力于还原经典传奇游戏体验，提供最稳定的网通服务器和最纯粹的PK环境。无论你是老玩家还是新朋友，这里都有属于你的传奇。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h3>游戏版本</h3>
+                <ul>
+                    <li><a href="#">1.76复古</a></li>
+                    <li><a href="#">1.80英雄</a></li>
+                    <li><a href="#">1.85合击</a></li>
+                    <li><a href="#">1.95终极</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>帮助中心</h3>
+                <ul>
+                    <li><a href="#">游戏下载</a></li>
+                    <li><a href="#">常见问题</a></li>
+                    <li><a href="#">防骗指南</a></li>
+                    <li><a href="#">违规举报</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>联系方式</h3>
+                <ul>
+                    <li><a href="#">客服QQ：12345678</a></li>
+                    <li><a href="#">官方邮箱：admin@wangtong.com</a></li>
+                    <li style="margin-top:10px;">
+                        <div style="display:flex; gap:10px;">
+                            <div style="width:30px; height:30px; background:#333; border-radius:50%;"></div>
+                            <div style="width:30px; height:30px; background:#333; border-radius:50%;"></div>
+                            <div style="width:30px; height:30px; background:#333; border-radius:50%;"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 网通传奇 版权所有 | 仅供娱乐参考，请勿沉迷游戏</p>
+        </div>
+    </footer>
+
+</body>
+                                               </html>
