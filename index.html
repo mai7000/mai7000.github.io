@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="韩志国官方网站，展示个人简介、主要著作、社会活动及学术观点。了解韩志国的生平经历、成就贡献及相关领域动态。">
+    <meta name="keywords" content="韩志国, 韩志国简介, 韩志国著作, 经济学家, 专栏作家">
+    <title>韩志国-个人简介、著作与社会活动展示</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e1e4e8;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 1rem;
+            border-left: 4px solid var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #1a252f;
+            border-color: #1a252f;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--accent-color);
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Profile Section */
+        .profile-section {
+            padding: 4rem 0;
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .profile-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .profile-avatar {
+            width: 150px;
+            height: 150px;
+            background-color: #ddd;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #999;
+            background-image: url('https://picsum.photos/seed/hanzhiguo/300/300');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .profile-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-card .role {
+            color: var(--accent-color);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .bio-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .bio-content p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            color: var(--text-secondary);
+        }
+
+        /* Works Section */
+        .works-section {
+            padding: 4rem 0;
+            background-color: #fff;
+        }
+
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .work-card {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            background: var(--card-bg);
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .work-cover {
+            height: 180px;
+            background-color: #eee;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .work-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .work-info {
+            padding: 1.5rem;
+        }
+
+        .work-category {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .work-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .work-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Topics Section */
+        .topics-section {
+            padding: 4rem 0;
+        }
+
+        .topic-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .topic-item {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .topic-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .topic-item p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            margin-bottom: 1rem;
+        }
+
+        .newsletter p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .newsletter-form button {
+            padding: 0.8rem 1.5rem;
+            background-color: var(--accent-color);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a252f;
+            color: #bdc3c7;
+            padding: 3rem 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #34495e;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--card-bg);
+                padding: 1rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">韩<span>志国</span></a>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#about">关于我</a></li>
+                    <li><a href="#works">著作与观点</a></li>
+                    <li><a href="#topics">研究领域</a></li>
+                    <li><a href="#contact">联系合作</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>观察时代，记录思考</h1>
+                <p class="hero-subtitle">致力于宏观经济分析、资本市场研究与产业趋势洞察</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>20+</h3>
+                        <p>年从业经验</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p>出版著作</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100+</h3>
+                        <p>核心观点发表</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="profile-section">
+            <div class="container profile-grid">
+                <aside class="profile-card">
+                    <div class="profile-avatar"></div>
+                    <h3>韩志国</h3>
+                    <p class="role">资深经济学家 / 专栏作家</p>
+                    <div class="contact-info">
+                        <p>📧 contact@hanzhiguo.com</p>
+                        <p>📍 北京</p>
+                        <p>🔗 WeChat: HZG_Economist</p>
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <a href="#contact" class="btn btn-primary">预约访谈</a>
+                    </div>
+                </aside>
+                <article class="bio-content">
+                    <h2>人物简介</h2>
+                    <p>韩志国，中国著名的经济学家、评论家，长期致力于中国资本市场的发展研究与宏观经济分析。他以其独到的视角和犀利的笔触，对中国经济改革、股市走势及产业政策发表了大量具有影响力的文章和著作。</p>
+                    <p>韩志国先生曾担任多家知名财经媒体的专栏作者，参与多项国家级经济课题研究，并多次在重要的经济论坛上发表主题演讲。他主张理性投资、价值发现，并致力于推动资本市场的规范化与透明化。</p>
+                    <p>在过去的二十多年里，他不仅记录了中国经济的高速增长，也深刻剖析了转型期面临的挑战与机遇，为投资者和决策者提供了宝贵的参考依据。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Works Section -->
+        <section id="works" class="works-section">
+            <div class="container">
+                <h2 class="section-title">主要著作与观点</h2>
+                <div class="works-grid">
+                    <article class="work-card">
+                        <div class="work-cover">
+                            <img src="https://picsum.photos/seed/book1/400/300" alt="著作封面">
+                        </div>
+                        <div class="work-info">
+                            <div class="work-category">经济评论</div>
+                            <h3 class="work-title">《中国股市：问题与出路》</h3>
+                            <p class="work-desc">深入剖析中国资本市场的制度缺陷与未来改革方向。</p>
+                            <a href="#" class="btn btn-primary" style="padding: 0.4rem 1rem; font-size: 0.85rem;">查看详情</a>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <div class="work-cover">
+                            <img src="https://picsum.photos/seed/book2/400/300" alt="著作封面">
+                        </div>
+                        <div class="work-info">
+                            <div class="work-category">投资策略</div>
+                            <h3 class="work-title">《价值投资的回归》</h3>
+                            <p class="work-desc">在波动市场中寻找确定性，构建长期价值投资体系。</p>
+                            <a href="#" class="btn btn-primary" style="padding: 0.4rem 1rem; font-size: 0.85rem;">查看详情</a>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <div class="work-cover">
+                            <img src="https://picsum.photos/seed/book3/400/300" alt="著作封面">
+                        </div>
+                        <div class="work-info">
+                            <div class="work-category">宏观分析</div>
+                            <h3 class="work-title">《经济转型期的挑战》</h3>
+                            <p class="work-desc">探讨新常态下中国经济结构的调整与升级路径。</p>
+                            <a href="#" class="btn btn-primary" style="padding: 0.4rem 1rem; font-size: 0.85rem;">查看详情</a>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <div class="work-cover">
+                            <img src="https://picsum.photos/seed/book4/400/300" alt="著作封面">
+                        </div>
+                        <div class="work-info">
+                            <div class="work-category">历史回顾</div>
+                            <h3 class="work-title">《中国资本三十年》</h3>
+                            <p class="work-desc">回顾中国资本市场建立以来的重大历史节点。</p>
+                            <a href="#" class="btn btn-primary" style="padding: 0.4rem 1rem; font-size: 0.85rem;">查看详情</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Topics Section -->
+        <section id="topics" class="topics-section">
+            <div class="container">
+                <h2 class="section-title">核心研究领域</h2>
+                <div class="topic-list">
+                    <div class="topic-item">
+                        <h3>宏观经济政策</h3>
+                        <p>分析货币政策、财政政策对市场的传导机制，预测经济周期波动。</p>
+                    </div>
+                    <div class="topic-item">
+                        <h3>资本市场改革</h3>
+                        <p>关注注册制改革、退市机制完善及多层次资本市场建设。</p>
+                    </div>
+                    <div class="topic-item">
+                        <h3>产业投资机会</h3>
+                        <p>挖掘科技创新、消费升级及绿色能源领域的投资价值。</p>
+                    </div>
+                    <div class="topic-item">
+                        <h3>上市公司治理</h3>
+                        <p>研究企业内部控制、信息披露与股东权益保护问题。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>订阅更新</h2>
+                <p>获取最新的经济观点、市场分析及著作发布信息。</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('感谢您的订阅！我们将定期发送更新。');">
+                    <input type="email" placeholder="请输入您的电子邮箱" required>
+                    <button type="submit">订阅</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="profile-section" style="padding-bottom: 2rem;">
+            <div class="container">
+                <h2 class="section-title">联系与合作</h2>
+                <div style="max-width: 800px; background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <p style="margin-bottom: 1.5rem;">欢迎就学术交流、媒体采访或商业合作事宜进行联系。</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">姓名</label>
+                            <input type="text" style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 4px;">
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">邮箱</label>
+                            <input type="email" style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 4px;">
+                        </div>
+                        <div style="grid-column: span 2;">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">留言内容</label>
+                            <textarea rows="4" style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 4px;"></textarea>
+                        </div>
+                        <div style="grid-column: span 2;">
+                            <button class="btn btn-primary" style="width: 100%;">发送消息</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>韩志国</h4>
+                    <p>致力于为公众提供客观、理性的经济分析。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#about">关于我</a></li>
+                        <li><a href="#works">著作</a></li>
+                        <li><a href="#topics">观点</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">知乎专栏</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 韩志国个人官方网站. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById('nav-menu');
+            nav.classList.toggle('active');
+        }
+
+        // Close menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('nav-menu').classList.remove('active');
+            });
+        });
+
+        // Simple form handling visual feedback
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const btn = this.querySelector('button');
+                const originalText = btn.innerText;
+                btn.innerText = '已发送';
+                btn.style.backgroundColor = '#27ae60';
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.backgroundColor = '';
+                    this.reset();
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+                          </html>
